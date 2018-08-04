@@ -1,0 +1,4 @@
+baseURL = "https://whatstyle.net"
+languageCode = "en-us"
+title = "Whatstyle"
+theme = "whatstyle"

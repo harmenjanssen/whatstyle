@@ -1,0 +1,15 @@
+{{ define "title"}}{{ $.Site.Title }}{{ end }}
+
+{{ define "main" }}
+
+<section class="post-block">
+    <ul>
+    {{ range first 10 (where .Data.Pages "Section" "articles") }}
+        <li>
+            {{ partial "post-preview" . }}
+        </li>
+    {{ end }}
+    </ul>
+</section>
+
+{{ end }}

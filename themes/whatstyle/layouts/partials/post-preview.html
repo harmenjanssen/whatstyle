@@ -1,0 +1,9 @@
+<a class="post-preview" href="{{ .RelPermalink }}" title="{{ .Title }}">
+    <div class="post-preview__body">
+        <time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Description }}</p>
+        <small style="opacity: 0.5;">{{ .ReadingTime }} min read</small>
+    </div>
+</a>
+

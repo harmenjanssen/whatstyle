@@ -13,11 +13,11 @@
     {{- end -}}
 {{- end -}}
 </title>
-<link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}">
+<link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}?{{ now.Unix }}">
 <script async defer src="{{ "/js/main.js" | relURL }}"></script>
 
 {{ partial "header.html" . -}}
-<main>
+<main role="main">
 {{- block "main" . }}{{- end }}
 </main>
 {{- partial "footer.html" . -}}

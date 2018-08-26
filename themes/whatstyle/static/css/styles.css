@@ -10,12 +10,14 @@
 * { box-sizing: border-box; }
 
 body {
-    max-width: 760px;
+    max-width: 35em;
     min-height: 100%;
     margin: 0;
     padding: 2em;
+    display: flex;
+    flex-direction: column;
     font-family: sans-serif;
-    font-size: 1.6em;
+    font-size: 1.5em;
     line-height: 1.5;
     color: var(--body-color);
     background: #fff;
@@ -26,7 +28,7 @@ html {
     background-image: url('/build/images/glyphs.png');
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: lighter;
     color: var(--header-color);
 }
@@ -49,6 +51,9 @@ a:hover, a:focus {
     color: #000;
     border-color: currentColor;
 }
+a:active {
+    -webkit-text-fill-color: var(--primary-color);
+}
 
 pre {
     background: #eee;
@@ -60,4 +65,8 @@ pre {
     font-weight: lighter;
     text-transform: lowercase;
     border: 0;
+}
+
+[role="main"] {
+    flex: 1;
 }

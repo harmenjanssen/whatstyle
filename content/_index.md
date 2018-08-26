@@ -5,7 +5,8 @@ description: "Personal website of Harmen Janssen, web developer."
 
 # Hi! 
 
-I'm **Harmen Janssen**. I've been making websites for well over a decade. Most of that time was and is still spent at [Grrr](https://grrr.nl), a great agency making great stuff, on the web or otherwise.
+I'm **Harmen Janssen**. I've been making websites for well over a decade.  
+Most of that time was and is still spent at [Grrr](https://grrr.nl), a great agency making great stuff: technologically sound and aesthetically arousing.
 
 I'm passionate about **cooking**, **music**, **functional programming**, **vim**, **git**.
 

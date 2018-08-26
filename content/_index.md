@@ -3,4 +3,11 @@ title: Home
 description: "Personal website of Harmen Janssen, web developer."
 ---
 
-Dit is de homepage.
+# Hi! 
+
+I'm **Harmen Janssen**. I've been making websites for well over a decade. Most of that time was and is still spent at [Grrr](https://grrr.nl), a great agency making great stuff, on the web or otherwise.
+
+I'm passionate about **cooking**, **music**, **functional programming**, **vim**, **git**.
+
+[I used to run a blog](/articles), but would recommend [Grrr's Tech blog](https://grrr.tech) where I do most of my writing these days.
+

@@ -1,0 +1,53 @@
+:root {
+    --secondary-color: red;
+    --primary-color: orange;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    max-width: 760px;
+    min-height: 100%;
+    margin: 0;
+    padding: 2em;
+    font-family: sans-serif;
+    font-size: 1.6em;
+    line-height: 1.5;
+    color: #444;
+    background: #fff;
+}
+html {
+    height: 100%;
+    background-size: 10%;
+    background-image: url('/build/images/glyphs.png');
+}
+
+h1, h2, h3 {
+    font-weight: lighter;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary-color);
+    background: -webkit-gradient(linear, 0% 0%, 30% 100%, from(var(--secondary-color)), to(var(--primary-color)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+a:hover, a:focus {
+    outline: 0;
+    -webkit-text-fill-color: #000;
+    border-color: #000;
+}
+
+pre {
+    background: #eee;
+    padding: .5em;
+    overflow-x: auto;
+}
+
+[role="banner"] a {
+    font-weight: lighter;
+    text-transform: lowercase;
+    border: 0;
+}

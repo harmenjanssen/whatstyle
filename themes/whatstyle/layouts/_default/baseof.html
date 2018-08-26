@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
-</html>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+
+<title>
+{{- if .IsHome -}}
+    {{ $.Site.Title }}{{ with $.Page.Title }} — {{ . }}{{ end }}
+{{- else -}}
+    {{- block "title" . -}}
+        {{ with $.Page.Title }}{{ . }} | {{ end }}{{ $.Site.Title }}
+    {{- end -}}
+{{- end -}}
+</title>
+<link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}">
+
+{{ partial "header.html" . -}}
+<main>
+{{- block "main" . }}{{- end }}
+</main>
+{{- partial "footer.html" . -}}

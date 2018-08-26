@@ -1,6 +1,10 @@
 :root {
-    --secondary-color: red;
-    --primary-color: orange;
+    --body-color: #444;
+    --header-color: #000;
+    --primary-color: var(--body-color);
+    --secondary-color: var(--body-color);
+    --gradient-direction: 30deg;
+    --gradient-distance: 0%;
 }
 
 * { box-sizing: border-box; }
@@ -13,7 +17,7 @@ body {
     font-family: sans-serif;
     font-size: 1.6em;
     line-height: 1.5;
-    color: #444;
+    color: var(--body-color);
     background: #fff;
 }
 html {
@@ -24,20 +28,26 @@ html {
 
 h1, h2, h3 {
     font-weight: lighter;
-    color: #000;
+    color: var(--header-color);
 }
 
 a {
     text-decoration: none;
-    border-bottom: 1px solid var(--primary-color);
-    background: -webkit-gradient(linear, 0% 0%, 30% 100%, from(var(--secondary-color)), to(var(--primary-color)));
+    color: var(--primary-color);
+    border-bottom: 1px solid currentColor;
+    background: linear-gradient(
+        var(--gradient-direction),
+        var(--primary-color) var(--gradient-distance),
+        var(--secondary-color)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 a:hover, a:focus {
     outline: 0;
     -webkit-text-fill-color: #000;
-    border-color: #000;
+    color: #000;
+    border-color: currentColor;
 }
 
 pre {

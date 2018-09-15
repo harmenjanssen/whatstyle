@@ -70,3 +70,48 @@ pre {
 [role="main"] {
     flex: 1;
 }
+
+.social-links ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.social-links li {
+    margin-right: 1em;
+}
+
+.social-links a {
+    width: 30px;
+    display: block;
+}
+
+.social-links a {
+    position: relative;
+    width: 60px; height: 60px;
+    display: block;
+    border-radius: 30px;
+    background: linear-gradient(
+        var(--gradient-direction),
+        var(--primary-color) var(--gradient-distance),
+        var(--secondary-color)
+    );
+    border: 0;
+}
+
+.social-links a:hover, .social-links a:focus {
+    background: #000;
+}
+
+.social-links svg {
+    position: absolute;
+    left: 50%; top: 50%;
+    max-width: 30px;
+    transform: translate(-50%, -50%);
+    fill: #FFF;
+}
+
+.main-footer {
+    font-size: .75em;
+    color: #bbb;
+}

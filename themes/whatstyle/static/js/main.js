@@ -1,3 +1,8 @@
+/**
+ * "How did he come up with this crazy stuff?"
+ * - Unknown spectator viewing source at whatstyle.net
+ *
+ */
 const colors = [
   'orange',
   'orangered',
@@ -35,6 +40,12 @@ const col2 = randomColor(colors, col1);
 
 document.documentElement.style.setProperty('--primary-color', col1);
 document.documentElement.style.setProperty('--secondary-color', col2);
+
+console.log(
+  'Hi! The following colors have been chosen at random for your visit:'
+);
+console.log(`%c - ${col1}`, `color: ${col1}`);
+console.log(`%c - ${col2}`, `color: ${col2}`);
 
 
 // Store references to link positions one time @ page load.

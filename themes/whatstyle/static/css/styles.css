@@ -9,25 +9,47 @@
 
 * { box-sizing: border-box; }
 
-body {
-    max-width: 35em;
-    min-height: 100%;
-    margin: 0;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
-    font-size: 1.5em;
-    line-height: 1.5;
-    color: var(--body-color);
-    background: #fff;
-}
 html {
     height: 100%;
     background-size: 10%;
     background-image: url('/build/images/glyphs.png');
 }
 
+body {
+    max-width: 35em;
+    min-height: 100%;
+    margin: 0; padding: 1em;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: var(--body-color);
+    background: #fff;
+}
+
+/**
+ * Structure
+ */
+[role="banner"] a {
+    font-weight: lighter;
+    text-transform: lowercase;
+    border: 0;
+}
+
+[role="main"] {
+    flex: 1;
+}
+
+
+.main-footer {
+    font-size: .75em;
+    color: #bbb;
+}
+
+/**
+ * Content
+ */
 h1, h2, h3, h4, h5, h6 {
     font-weight: lighter;
     color: var(--header-color);
@@ -61,24 +83,74 @@ pre {
     overflow-x: auto;
 }
 
-[role="banner"] a {
-    font-weight: lighter;
-    text-transform: lowercase;
-    border: 0;
+blockquote {
+    font-style: italic;
 }
 
-[role="main"] {
-    flex: 1;
+blockquote p {
+    position: relative;
 }
 
+blockquote p::before, blockquote p::after {
+    color: #bbb;
+}
+
+blockquote p::before {
+    position: absolute;
+    right: 100%;
+    content: open-quote;
+}
+
+blockquote p::after {
+    content: close-quote;
+}
+
+blockquote ul {
+    padding: 0;
+}
+
+.home main p:first-of-type {
+    margin: 0 -.5em 1em;
+    padding: .5em;
+    border: 1px solid var(--primary-color);
+    border-width: 1px 0;
+}
+
+/**
+ * Blog index
+ */
+.articles {
+    list-style: none;
+    padding: 0;
+}
+
+.articles li {
+    margin-bottom: 1em;
+}
+
+.articles time {
+    display: block;
+    font-size: .75em;
+    color: #bbb;
+}
+
+/**
+ * "Elsewhere"
+ */
 .social-links ul {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     list-style: none;
 }
 
 .social-links li {
-    margin-right: 1em;
+    margin-right: .5em;
+    margin-bottom: .5em;
+}
+
+.social-links li:last-child {
+    margin-right: 0;
 }
 
 .social-links a {
@@ -88,9 +160,9 @@ pre {
 
 .social-links a {
     position: relative;
-    width: 60px; height: 60px;
+    width: 2em; height: 2em;
     display: block;
-    border-radius: 30px;
+    border-radius: 1em;
     background: linear-gradient(
         var(--gradient-direction),
         var(--primary-color) var(--gradient-distance),
@@ -106,12 +178,15 @@ pre {
 .social-links svg {
     position: absolute;
     left: 50%; top: 50%;
-    max-width: 30px;
+    max-width: 1em;
     transform: translate(-50%, -50%);
     fill: #FFF;
 }
 
-.main-footer {
-    font-size: .75em;
-    color: #bbb;
+@media (min-width: 320px) {
+    body {
+        padding: 2em;
+        font-size: 1.4em;
+        line-height: 1.5;
+    }
 }

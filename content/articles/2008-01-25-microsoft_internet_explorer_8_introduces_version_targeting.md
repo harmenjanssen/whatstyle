@@ -33,7 +33,7 @@ In my day-job, I sometimes design small printed advertisements. I do this using 
 
 Let's bring this story to the web: whenever I write the code that makes up a website, it's _my_ responsibility to ensure this content gets delivered properly to whatever userbase I'm targeting. Why should Microsoft take this responsibility? Let those old, rickety pages break! I remember Andy Clarke saying something like, <q>people don't expect to be able to watch HD movies on their old, non-HD television sets. Why do they expect the latest CSS magic to work in an old, out-dated browser?</q>. If you ask me, this couldn't be more true. To me, it's logical a newer browser can display more, or different features than an old browser can. Andy Budd makes a similar statement in [his article about this subject](http://www.andybudd.com/archives/2008/01/has_internet_ex/) by saying:
 
-> Imagine if all new media players had to be backward compatible? Weâ€™d end up with a device that could play anything from 8mm film right the way through to Blu-ray disks.
+> Imagine if all new media players had to be backward compatible? We'd end up with a device that could play anything from 8mm film right the way through to Blu-ray disks.
 
 ### I don't buy it
 

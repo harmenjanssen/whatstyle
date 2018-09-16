@@ -41,49 +41,49 @@ Here I will provide some insight in what the Chunk class actually does to your s
 $len = count($searchTerms);
 $chunk = '';
 for ($i = 0; $i 
+```
 
-<p>
-As you can see, Chunk loops through the <code>$searchTerms</code> array (the third argument of the constructor method) in order to see if one of the words matches a word in the given string. When it does, it saves the position of that string in the variable <code>$pos</code>, using PHP's built-in function <code>strpos()</code>.
-</p>
-<p>
+As you can see, Chunk loops through the `$searchTerms` array (the third argument of the constructor method) in order to see if one of the words matches a word in the given string. When it does, it saves the position of that string in the variable `$pos`, using PHP's built-in function `strpos()`.
+
 It then calculates if that position minus half the maximum amount of characters is less than zero...
-</p>
+
+```
 if (($pos - ($maxChar/2)) 
 
-<p>
-...in order to decide wether or not it should append "..." to the  start of the string. The same goes for the back of the string. Using <code>substr()</code> it then cuts the snippet out of the string you applied as the first argument and breaks the loop.
-</p>
-<p>
+```
+
+...in order to decide wether or not it should append "..." to the  start of the string. The same goes for the back of the string. Using `substr()` it then cuts the snippet out of the string you applied as the first argument and breaks the loop.
+
 If no match is found in the array, the class returns a snippet starting at position 0 of your string:
-</p>
+
+```
 if ($chunk == '')
 {
 	$chunk = substr($str,0,$maxChar).'...';
 }
+```
 
-<h3>Highlighting search terms</h3>
-<p>
-This is an important bit, you may not want this to happen in your situation, so pay attention. Since I don't want any HTML to come through, I use <code>strip_tags()</code> to remove every tag from the string (for extra security, you oughtta use <a href="http://nl2.php.net/manual/en/function.htmlentities.php" title="See php.net's resources on htmlentities()"><code>htmlentities()</code></a> or <a href="http://nl2.php.net/manual/en/function.htmlspecialchars.php" title="See php.net's resources on htmlspecialchars()"><code>htmlspecialchars()</code></a> on top of that).
-</p>
-<p>
-After removing any HTML I again loop through the <code>$searchTerms</code> array, and replace any occurance of the words therein with a <code>span</code>-tag of the class "match". This way, I can highlight the words one searched for using CSS. But, if you don't want this to happen, this is the bit of code you should remove or comment out:
-</p>
+### Highlighting search terms
+
+This is an important bit, you may not want this to happen in your situation, so pay attention. Since I don't want any HTML to come through, I use `strip_tags()` to remove every tag from the string (for extra security, you oughtta use `htmlentities()` or `htmlspecialchars()` on top of that).
+
+After removing any HTML I again loop through the `$searchTerms` array, and replace any occurance of the words therein with a `span`-tag of the class "match". This way, I can highlight the words one searched for using CSS. But, if you don't want this to happen, this is the bit of code you should remove or comment out:
+
+```
 $chunk = strip_tags ($chunk);
 foreach ($searchTerms as $term)
 {
 	$chunk = str_replace ($term,"<span class="\"match\"">$term</span>",$chunk);
 }
+```
 
-<p>
 Last but not least, the <code>get()</code> method of the Chunk class returns the created chunk:
-</p>
+
+```
 function get ()
 {
 	return $this->chunk;
 }
-
-
-<p>
-And that's it! The Chunk class can be downloaded <a href="http://www.whatstyle.net/examples/Chunk.rar" title="Download it!">here</a> as a RAR-archive. From my point of view, it couldn't be any simpler, but you might think otherwise. Feel free to <a href="http://www.whatstyle.net/contact.php" title="Contact me">contact me</a> with questions or leave a comment.
-</p>
 ```
+
+And that's it! The Chunk class can be downloaded [here](http://www.whatstyle.net/examples/Chunk.rar) as a RAR-archive. From my point of view, it couldn't be any simpler, but you might think otherwise. Feel free to [contact me](http://www.whatstyle.net/contact.php) with questions or leave a comment.

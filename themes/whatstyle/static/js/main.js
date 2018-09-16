@@ -72,3 +72,24 @@ window.addEventListener('mousemove', e => {
     a.style.setProperty('--gradient-distance', `${100 - (distance / 400) * 100}%`);
   });
 });
+
+
+/*
+// Color favicon
+const canvas = document.createElement('canvas');
+const canvasSize = 16;
+canvas.style.width = `${canvasSize}px`;
+canvas.setAttribute('width', canvasSize);
+canvas.setAttribute('height', canvasSize);
+const ctx = canvas.getContext('2d', {alpha: false});
+ctx.fillStyle = 'black';
+ctx.strokeStyle = '#fff';
+ctx.font = 'lighter 10px sans-serif';
+ctx.textAlign = 'center';
+
+ctx.fillRect(0, 0, canvasSize, canvasSize);
+ctx.strokeText('W', canvasSize/2, canvasSize/2); // canvasSize/2 + 4 - 4);
+ctx.save();
+
+document.body.appendChild(canvas);
+*/

@@ -18,7 +18,9 @@ My <a href="http://www.whatstyle.net/articles/28/subcookies">Subcookies</a> arti
 
 _Note; for a complete rundown of the original script, read [Subcookies](http://www.whatstyle.net/articles/28/subcookies)._
 
-- The `subcookiejar.fetch ()` method now returns an object literal (or, as the cool kids say, "JSON") if the second parameter is left undefined. This means that by doing the following... ```
+- The `subcookiejar.fetch ()` method now returns an object literal (or, as the cool kids say, "JSON") if the second parameter is left undefined. This means that by doing the following...
+
+```
   // bake a new cookie
   subcookiejar.bake ('admin', {
     name: 'Harmen',
@@ -28,9 +30,11 @@ _Note; for a complete rundown of the original script, read [Subcookies](http://w
   
   // fetch it
   var admin = subcookiejar.fetch ('admin');
-  ```
+```
   
-   ...you can fetch the admin's values by doing something like this: ```
+   ...you can fetch the admin's values by doing something like this:
+
+```
   alert (admin.name);
   alert (admin.age);
   alert (admin.homepage);

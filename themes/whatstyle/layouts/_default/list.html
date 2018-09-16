@@ -8,10 +8,13 @@
         {{.Content}}
 
     </article>
-    <ol>
+    <ol class="articles">
     {{ range .Pages }}
         <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+            <a href="{{.Permalink}}">
+                {{.Title}}
+            </a>
+            <time>{{ .Date.Format "Jan 2, 2006" }}</time>
         </li>
     {{ end }}
     </ol>

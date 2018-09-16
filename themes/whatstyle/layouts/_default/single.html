@@ -7,17 +7,5 @@
         </footer>
     </header>
     {{ .Content }}
-    <aside>
-        <nav>
-            <ul>
-                {{ with .PrevInSection }}
-                <li><a class="previous" href="{{.Permalink}}"> {{.Title}}</a></li>
-                {{ end }}
-                {{ with .NextInSection }}
-                <li><a class="next" href="{{.Permalink}}"> {{.Title}}</a></li>
-                {{ end }}
-            </ul>
-        </nav>
-    </aside>
 </article>
 {{ end }}

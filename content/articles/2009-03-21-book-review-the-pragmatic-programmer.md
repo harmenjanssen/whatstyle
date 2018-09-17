@@ -8,7 +8,7 @@ url: /articles/57/book-review-the-pragmatic-programmer
 {{< intro >}}
 <p>David, my fellow nerd at <a href="http://grrr.nl">Grrr</a>, whom I highly respect as a programmer, recommended <a href="http://www.pragprog.com/the-pragmatic-programmer">The Pragmatic Programmer</a> as a bible for developers.</p>
 <p>So what could I do but pick it up and give it a read?</p>
-<img src="/build/images/blog/pragmatic-programmer.jpg" alt="The Pragmatic Programmer front cover">
+<img src="/blog/images/pragmatic-programmer.jpg" alt="The Pragmatic Programmer front cover">
 {{< /intro >}}
 
 And a bible it is. I have never before read such inspiring words about programming.

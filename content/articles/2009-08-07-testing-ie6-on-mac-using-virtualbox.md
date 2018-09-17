@@ -12,7 +12,7 @@ url: /articles/62/testing-ie6-on-mac-using-virtualbox
 
 ### Downloading and installation
 
- ![The VirtualBox logo](/build/images/blog/virtualbox-logo.jpg)First, you need the Virtual Box app, obviously. [Go to the download page](http://www.virtualbox.org/wiki/Downloads), grab the Mac distribution, and install it.
+ ![The VirtualBox logo](/blog/images/virtualbox-logo.jpg)First, you need the Virtual Box app, obviously. [Go to the download page](http://www.virtualbox.org/wiki/Downloads), grab the Mac distribution, and install it.
 
 Meanwhile, [choose an image from the list at the Microsoft site](http://www.microsoft.com/Downloads/details.aspx?FamilyID=21eabb90-958f-4b64-b5f1-73d0a413c8ef&displaylang=en).
 

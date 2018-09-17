@@ -6,7 +6,7 @@ url: /articles/55/hello_amsterdam
 ---
 
 {{< intro >}}
-<img src="/build/images/blog/grrr.jpg" alt="Grrr!">
+<img src="/blog/images/grrr.jpg" alt="Grrr!">
 <p>After a year of working for <a href="http://dutchinternetworks.nl">Dutch Internet Works</a>, I've decided to leave Baarn and join <a href="http://www.grrr.nl">Grrr Medialab</a> in Amsterdam.</p>
 {{< /intro >}}
 

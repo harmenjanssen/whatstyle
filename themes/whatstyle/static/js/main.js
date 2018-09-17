@@ -1,9 +1,14 @@
+(() => {
+if (typeof document.documentElement.style.setProperty !== 'function') {
+  return;
+}
+
 /**
  * "How did he come up with this crazy stuff?"
  * - Unknown spectator viewing source at whatstyle.net
  *
  */
-const colors = [
+const COLORS = [
   'orange',
   'orangered',
   'purple',
@@ -18,8 +23,8 @@ const colors = [
   'hotpink',
   'deeppink'
 ];
-const random = xs => xs[Math.floor(Math.random() * xs.length)];
 
+const random = xs => xs[Math.floor(Math.random() * xs.length)];
 const randomColor = (colors, refColor = undefined) => {
   const choice = random(colors);
   return choice === refColor ? randomColor(colors, refColor) : choice;
@@ -35,8 +40,8 @@ const getDistance = ({ x: x1, y: y1 }, { x: x2, y: y2 }) => {
 };
 
 // Set colors for current pageview.
-const col1 = randomColor(colors);
-const col2 = randomColor(colors, col1);
+const col1 = randomColor(COLORS);
+const col2 = randomColor(COLORS, col1);
 
 document.documentElement.style.setProperty('--primary-color', col1);
 document.documentElement.style.setProperty('--secondary-color', col2);
@@ -74,7 +79,6 @@ window.addEventListener('mousemove', e => {
 });
 
 
-/*
 // Color favicon
 const canvas = document.createElement('canvas');
 const canvasSize = 16;
@@ -82,14 +86,14 @@ canvas.style.width = `${canvasSize}px`;
 canvas.setAttribute('width', canvasSize);
 canvas.setAttribute('height', canvasSize);
 const ctx = canvas.getContext('2d', {alpha: false});
-ctx.fillStyle = 'black';
+ctx.fillStyle = col1;
 ctx.strokeStyle = '#fff';
-ctx.font = 'lighter 10px sans-serif';
+ctx.font = 'lighter 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 ctx.textAlign = 'center';
 
 ctx.fillRect(0, 0, canvasSize, canvasSize);
-ctx.strokeText('W', canvasSize/2, canvasSize/2); // canvasSize/2 + 4 - 4);
+ctx.strokeText('W', canvasSize/2, 13); // A magic number 🌟
 ctx.save();
 
-document.body.appendChild(canvas);
-*/
+document.querySelector('link[href="/favicon.ico"]').href = canvas.toDataURL("image/x-icon");
+})();

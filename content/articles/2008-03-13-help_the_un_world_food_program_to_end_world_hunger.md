@@ -6,7 +6,7 @@ url: /articles/45/help_the_un_world_food_program_to_end_world_hunger
 ---
 
 {{< intro >}}
-<a href="http://freerice.com"><img src="http://www.whatstyle.net/examples/fleelice.gif" alt="Guess the meaning of English words by playing this educative game"></a>
+<a href="http://freerice.com"><img src="https://www.whatstyle.net/examples/fleelice.gif" alt="Guess the meaning of English words by playing this educative game"></a>
 <p>
 <a href="http://freerice.com">The UN World Food Program has created a game to gather food for third-world countries.</a><br>
 In the game, you have to guess the correct synonym for an English word. For non-native speakers it can actually be quite challenging and educational.

@@ -23,7 +23,7 @@ There are some sites around that provide an alternative, but these techniques re
 
 So far we have a regular form, nothing special. I'm going to use <abbr title="Cascading Style Sheets"><abbr title="Cascading Style Sheets">CSS</abbr></abbr> to make these regular checkboxes look like these:
 
- ![An unchecked box](http://www.whatstyle.net/examples/bullet.gif) ![A checked box](http://www.whatstyle.net/examples/bullet_checked.gif)(The icons are part of an icon set provided by [Paul Armstrong](http://paularmstrongdesigns.com))
+ ![An unchecked box](https://www.whatstyle.net/examples/bullet.gif) ![A checked box](https://www.whatstyle.net/examples/bullet_checked.gif)(The icons are part of an icon set provided by [Paul Armstrong](http://paularmstrongdesigns.com))
 
 ### The presentational layer
 

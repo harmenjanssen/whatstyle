@@ -20,7 +20,7 @@ Yesterday though, I used my free evening to download and play around with Opera 
 Speed Dial's such a simple, easy feature. It's almost too simple to be of any value, but on the contrary!
 
  ![Opera's Speed Dial lets you quickly select your favourite websites when 
-opening a new tab](http://www.whatstyle.net/examples/opera_sd.jpg)Speed Dial lets you add 9 different websites that you visit frequently and displays these as thumbnails every time you open a new tab. It works great and very intuitive. Most of the time I want to leave my current tab intact and open a bookmark or something in a new one. In other words: Speed Dial always shows itself on exactly the right time and really speeds up my browsing experience.
+opening a new tab](https://www.whatstyle.net/examples/opera_sd.jpg)Speed Dial lets you add 9 different websites that you visit frequently and displays these as thumbnails every time you open a new tab. It works great and very intuitive. Most of the time I want to leave my current tab intact and open a bookmark or something in a new one. In other words: Speed Dial always shows itself on exactly the right time and really speeds up my browsing experience.
 
 #### Integrated BitTorrent support
 
@@ -40,11 +40,11 @@ The one thing I disliked about Firefox was its poor RSS feed handling. Let me br
 Now tell me, by looking at the screenshot below, can you tell if any of these websites has been updated?
 
  ![Firefox does not show if a feed has been updated until you mouse-over that feed 
-to check the headlines](http://www.whatstyle.net/examples/firefox_rss.jpg)Exactly. Instead of manually having to check these websites, I have to manually check the feeds in Firefox. What's up with that, really?
+to check the headlines](https://www.whatstyle.net/examples/firefox_rss.jpg)Exactly. Instead of manually having to check these websites, I have to manually check the feeds in Firefox. What's up with that, really?
 
 Opera presents my feeds exactly in the way I want. After the name of the feed, a little digit is shown representing the number of new articles that are currently unread. Just the way I like it.
 
- ![Opera shows the number of unread articles after the name of the feed](http://www.whatstyle.net/examples/opera_rss.jpg)The only thing that I find a tad stupid is that there is no way (or at least no way I have discovered yet) to order my feeds in categories or something. I like the fact that I have my webcomics separate from my webdevelopment blogs in Firefox. Oh well.
+ ![Opera shows the number of unread articles after the name of the feed](https://www.whatstyle.net/examples/opera_rss.jpg)The only thing that I find a tad stupid is that there is no way (or at least no way I have discovered yet) to order my feeds in categories or something. I like the fact that I have my webcomics separate from my webdevelopment blogs in Firefox. Oh well.
 
 #### Mouse gestures
 

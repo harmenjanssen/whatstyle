@@ -9,7 +9,7 @@ url: /articles/4/styling_quotations
 <p>
 I've always liked the way most standards-compliant browsers display inline quotations (marked up with <code>&lt;q&gt;</code>). In case you don't have such a browser at your disposal; it's an easy concept to grasp, these browsers put quotation-marks around the text like this:
 </p>
-<img src="http://www.whatstyle.net/examples/quote.jpg" alt="A picture of how inline quotations look in standards-compliant browsers" width="283" height="30">
+<img src="https://www.whatstyle.net/examples/quote.jpg" alt="A picture of how inline quotations look in standards-compliant browsers" width="283" height="30">
 {{< /intro >}}
 
 <ins datetime="2006-08-27">**Warning: the technique described in this article should not be used. Make sure to read my [edit](#edit "Read the edit").**</ins> Internet Explorer however, does not use this default styling. But since you probably want quotation marks around your quotations, you've got two options:
@@ -26,7 +26,7 @@ I've always liked the way most standards-compliant browsers display inline quota
 
  Option 1 however, looks allright in Internet Explorer, but in most other browsers you end up with a double set of quotation marks, like this:
 
- ![A picture showing the awkward double set of quotation marks in standards-compliant browsers](http://www.whatstyle.net/examples/double_quote.jpg) That just looks plain silly. Luckily, this is easy to overcome using the following <abbr title="Cascading Style Sheets">CSS</abbr>:
+ ![A picture showing the awkward double set of quotation marks in standards-compliant browsers](https://www.whatstyle.net/examples/double_quote.jpg) That just looks plain silly. Luckily, this is easy to overcome using the following <abbr title="Cascading Style Sheets">CSS</abbr>:
 
  ```
 q:before,

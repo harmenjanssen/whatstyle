@@ -14,7 +14,7 @@ I did some fairly obvious pondering today. In a website I'm currently working on
 
 These are two images that work in the same way:
 
- ![The image for a regular link](http://www.whatstyle.net/examples/pic1-normal.jpg) ![The image for a hovered link](http://www.whatstyle.net/examples/pic1-hover.jpg)The CSS for the link would be something like this:
+ ![The image for a regular link](https://www.whatstyle.net/examples/pic1-normal.jpg) ![The image for a hovered link](https://www.whatstyle.net/examples/pic1-hover.jpg)The CSS for the link would be something like this:
 
  ```
 a {
@@ -38,9 +38,9 @@ a { background: #000 url(pic1.png) no-repeat; }
 a:hover { background-color: #f00; }
 ```
 
-Like I said; this is all very obvious and nothing new, but sometimes it's good to read a reminder. Check out [this page to see a comparison](http://www.whatstyle.net/examples/arrowbg.html).
+Like I said; this is all very obvious and nothing new, but sometimes it's good to read a reminder. Check out [this page to see a comparison](https://www.whatstyle.net/examples/arrowbg.html).
 
 ### Related reading:
 
-- If anything, use [CSS Sprites](http://www.alistapart.com/articles/sprites/)
-- [A more fancy example](http://www.alistapart.com/articles/supereasyblendys) by Matthew O'Neill
+- If anything, use [CSS Sprites](https://www.alistapart.com/articles/sprites/)
+- [A more fancy example](https://www.alistapart.com/articles/supereasyblendys) by Matthew O'Neill

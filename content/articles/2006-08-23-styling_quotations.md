@@ -12,10 +12,12 @@ I've always liked the way most standards-compliant browsers display inline quota
 <img src="https://www.whatstyle.net/examples/quote.jpg" alt="A picture of how inline quotations look in standards-compliant browsers" width="283" height="30">
 {{< /intro >}}
 
-<ins datetime="2006-08-27">**Warning: the technique described in this article should not be used. Make sure to read my [edit](#edit "Read the edit").**</ins> Internet Explorer however, does not use this default styling. But since you probably want quotation marks around your quotations, you've got two options:
+<ins datetime="2006-08-27">**Warning: the technique described in this article should not be used. Make sure to read my [edit](#edit "Read the edit").**</ins>
 
-1. Insert the quotes yourself like this: ```
-  <pre class="htmlCode">
+Internet Explorer however, does not use this default styling. But since you probably want quotation marks around your quotations, you've got two options:
+
+1. Insert the quotes yourself like this:   
+```
   <q>
   <strong>"</strong> To be or not to be. <strong>"</strong>
   </q>

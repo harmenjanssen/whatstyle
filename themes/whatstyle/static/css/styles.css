@@ -163,6 +163,7 @@ blockquote ul {
     width: 2em; height: 2em;
     display: block;
     border-radius: 1em;
+    background-color: #444;
     background: linear-gradient(
         var(--gradient-direction),
         var(--primary-color) var(--gradient-distance),

@@ -96,9 +96,9 @@ ctx.strokeText('W', canvasSize/2, 13); // A magic number 🌟
 ctx.save();
 
 document.querySelector('link[href="/favicon.ico"]').href = canvas.toDataURL("image/x-icon");
-})();
 
 // Update footer text
 const footer = document.querySelector('.main-footer');
 footer.innerHTML = `Colors generated randomly for no reason.<br>${footer.innerHTML}`;
 
+})();

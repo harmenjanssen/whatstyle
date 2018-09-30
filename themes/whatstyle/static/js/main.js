@@ -96,7 +96,8 @@ ctx.font = 'lighter 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
 ctx.textAlign = 'center';
 
 ctx.fillRect(0, 0, canvasSize, canvasSize);
-ctx.strokeText('W', canvasSize/2, 13); // A magic number 🌟
+ctx.fillStyle = '#fff';
+ctx.fillText('W', canvasSize/2, 13); // A magic number 🌟
 ctx.save();
 
 document.querySelector('link[href="/favicon.ico"]').href = canvas.toDataURL("image/x-icon");

@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="cleartype" content="on">
 <meta name="description" content="Harmen Janssen has been a web developer for a million years, and still thinks naming things is the hardest problem in computing.">
+<link rel="manifest" href="/manifest.json">
 
 <title>
 {{- if .IsHome -}}
@@ -28,4 +29,15 @@
 </main>
 {{- partial "footer.html" . -}}
 </body>
+<script>
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/serviceworker.js')
+        .then(function(registration) {
+            console.log('Service worker registered.');
+        })
+        .catch(function(error) {
+            console.error('Service worker registration failure!', error);
+        });
+}
+</script>
 </html>

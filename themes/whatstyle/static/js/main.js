@@ -1,4 +1,8 @@
-(() => {
+const executeIdly = f => typeof requestIdleCallback === 'function'
+  ? requestIdleCallback(f)
+  : setTimeout(f);
+
+executeIdly(() => {
 if (typeof document.documentElement.style.setProperty !== 'function') {
   return;
 }
@@ -101,4 +105,4 @@ document.querySelector('link[href="/favicon.ico"]').href = canvas.toDataURL("ima
 const footer = document.querySelector('.main-footer');
 footer.innerHTML = `Colors generated randomly for no reason.<br>${footer.innerHTML}`;
 
-})();
+});

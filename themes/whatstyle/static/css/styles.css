@@ -43,8 +43,7 @@ body {
 
 
 .main-footer {
-    font-size: .75em;
-    color: #bbb;
+    font-size: .65em;
 }
 
 /**
@@ -91,10 +90,6 @@ blockquote p {
     position: relative;
 }
 
-blockquote p::before, blockquote p::after {
-    color: #bbb;
-}
-
 blockquote p::before {
     position: absolute;
     right: 100%;
@@ -131,7 +126,6 @@ blockquote ul {
 .articles time {
     display: block;
     font-size: .75em;
-    color: #bbb;
 }
 
 /**

@@ -15,7 +15,7 @@
     {{ $.Site.Title }}{{ with $.Page.Title }} — {{ . }}{{ end }}
 {{- else -}}
     {{- block "title" . -}}
-        {{ with $.Page.Title }}{{ . }} | {{ end }}{{ $.Site.Title }}
+        {{ with $.Page.Title }}{{ . }} — {{ end }}{{ $.Site.Title }}
     {{- end -}}
 {{- end -}}
 </title>

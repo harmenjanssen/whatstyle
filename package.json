@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.2",
-    "next": "latest",
+    "next": "^12.1.4",
     "next-pwa": "^5.4.6",
     "prettier": "^2.2.1",
     "react": "^17.0.1",

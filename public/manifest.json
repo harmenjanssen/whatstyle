@@ -9,7 +9,17 @@
   "display": "standalone",
   "icons": [
     { "src": "/images/icon-small.png", "sizes": "48x48", "type": "image/png" },
-    { "src": "/images/icon-large.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "/images/icon-large.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/maskable-icon.png",
+      "size": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ],
   "version": "0.14",
   "manifest_version": 2

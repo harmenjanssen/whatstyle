@@ -4,11 +4,11 @@
   --primary-color: #ff336d;
   /* --secondary-color: #ffde7d; */
   --secondary-color: #ff8857;
-  --gradient-position-x: 50%;
-  --gradient-position-y: 50%;
+  --gradient-position-x: 75%;
+  --gradient-position-y: 25%;
   --gradient-min-size: 20%;
   --gradient-max-size: 80%;
-  --gradient-size: 20%;
+  --gradient-size: 10%;
 }
 
 * {

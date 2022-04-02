@@ -42,7 +42,11 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      articles: allArticles,
+      articles: allArticles.map(({ title, date, url }) => ({
+        title,
+        date,
+        url,
+      })),
     },
   };
 };

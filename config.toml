@@ -1,5 +1,0 @@
-baseURL = "https://www.whatstyle.net"
-languageCode = "en-us"
-title = "Whatstyle"
-theme = "whatstyle"
-disableHugoGeneratorInject = true

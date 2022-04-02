@@ -1,0 +1,5 @@
+.vscode
+
+dist
+src/compiled-assets
+node_modules

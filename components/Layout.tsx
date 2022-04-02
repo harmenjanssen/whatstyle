@@ -21,6 +21,7 @@ const Layout = ({ children, title = "Whatstyle", mainClass = "" }: Props) => {
           content="Harmen Janssen has been a web developer for a million years, and still thinks naming things is the hardest problem in computing."
         />
         <link rel="favicon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <title>{title}</title>
       </Head>

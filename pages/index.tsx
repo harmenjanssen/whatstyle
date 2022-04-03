@@ -5,6 +5,7 @@ import Github from "../components/social/Github";
 import Goodreads from "../components/social/Goodreads";
 import Instagram from "../components/social/Instagram";
 import Lastfm from "../components/social/Lastfm";
+import LinkedIn from "../components/social/LinkedIn";
 import Twitter from "../components/social/Twitter";
 
 const IndexPage = () => (
@@ -58,6 +59,9 @@ const IndexPage = () => (
           </li>
           <li>
             <Instagram />
+          </li>
+          <li>
+            <LinkedIn />
           </li>
         </ul>
       </nav>

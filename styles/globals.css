@@ -2,7 +2,6 @@
   --body-color: #444;
   --header-color: #000;
   --primary-color: #ff336d;
-  /* --secondary-color: #ffde7d; */
   --secondary-color: #ff8857;
   --gradient-position-x: 75%;
   --gradient-position-y: 25%;
@@ -45,7 +44,7 @@ body {
 @media (min-width: 420px) {
   body {
     font-size: 1.3em;
-    line-height: 1.5;
+    line-height: 1.65;
   }
 }
 

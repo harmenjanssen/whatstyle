@@ -15,20 +15,19 @@ const IndexPage = () => (
   >
     <h1>Hi!</h1>
     <p>
-      I'm <strong>Harmen Janssen</strong>. I've been making websites for well
-      over a decade.
+      I'm <strong>Harmen Janssen</strong>, full-stack developer since 2006.
       <br />
-      At the moment I'm making these websites at{" "}
-      <a href="https://grrr.nl">GRRR</a>, a great agency for Meaningful Matters,
-      where I'm leading the development team.
+      Currently I'm leading the development team at{" "}
+      <a href="https://grrr.nl">GRRR</a>, a great agency for Meaningful Matters.
     </p>
 
     <p>
-      I'm passionate about <strong>sports</strong>, <strong>cooking</strong>,{" "}
-      <strong>music</strong>, <strong>the JAMStack</strong>,{" "}
-      <strong>functional programming</strong>, and{" "}
-      <strong>inclusive design</strong>.
+      👋{" "}
+      <Link href="/cv">
+        <a>Take a look at my CV</a>
+      </Link>
     </p>
+
     <p>
       <Link href="/articles">
         <a>I used to run a blog</a>

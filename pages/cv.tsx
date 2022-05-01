@@ -128,7 +128,7 @@ const CvPage = () => (
     <h2>Personal interests</h2>
 
     <ul>
-      <li>I'm a father of a pretty cool boy and girl.</li>
+      <li>I'm the father of a pretty cool boy and girl.</li>
       <li>
         I'm an experienced amateur cook. I take cooking very seriously and
         strive to really understand the techniques. When I'm totally exhausted

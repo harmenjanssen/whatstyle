@@ -6,11 +6,7 @@ const CvPage = () => (
 
     <h2>Personal</h2>
 
-    <img
-      src="https://media-exp1.licdn.com/dms/image/C4E03AQEZH7kxroiuIw/profile-displayphoto-shrink_800_800/0/1517448443910?e=1657152000&v=beta&t=-iBoDF5BosbiVc6oHggGu7rzVbIh8sILwMPo9sthDow"
-      alt="Harmen Janssen"
-      className="my-face"
-    />
+    <img src="/images/harmen.jpeg" alt="Harmen Janssen" className="my-face" />
 
     <dl className="horizontal-dl">
       <dt>Name</dt>

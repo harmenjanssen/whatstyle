@@ -8,7 +8,7 @@ const CvPage = () => (
 
     <img src="/images/harmen.jpeg" alt="Harmen Janssen" className="my-face" />
 
-    <dl className="horizontal-dl">
+    <dl>
       <dt>Name</dt>
       <dd>Harmen Janssen</dd>
 
@@ -21,7 +21,7 @@ const CvPage = () => (
 
     <h2>Work experience</h2>
 
-    <dl className="horizontal-dl work-experience">
+    <dl className="work-experience">
       <dt>2021 +</dt>
       <dd>
         <span className="work-experience__role">Tech lead</span>{" "}
@@ -51,7 +51,7 @@ const CvPage = () => (
 
     <h2>Education</h2>
 
-    <dl className="horizontal-dl">
+    <dl>
       <dt>2003 - 2006</dt>
       <dd>Eindhovense School, Multimedia Design</dd>
     </dl>

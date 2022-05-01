@@ -139,6 +139,11 @@ blockquote ul {
   padding: 0;
 }
 
+ul {
+  margin-left: 0;
+  padding-left: 1em;
+}
+
 .attention {
   padding: 0.5em;
   border-left: 1px solid var(--body-color);
@@ -241,62 +246,64 @@ time {
 /**
  * CV
  */
-.horizontal-dl {
-  display: flex;
-  flex-flow: row wrap;
+dl {
   padding: 0;
   list-style: none;
 }
 
-.horizontal-dl dt {
+dt {
   position: relative;
   margin-right: 2.5%;
   padding-right: 2.5%;
   flex-basis: 22.5%;
-  text-align: right;
   font-weight: lighter;
   text-transform: lowercase;
 }
 
-.horizontal-dl dd {
+dd {
   margin: 0 0 0.5em;
   flex-basis: 70%;
   flex-grow: 1;
 }
 
-.horizontal-dl dd:last-child {
+dd:last-child {
   margin-bottom: 0;
 }
 
-.personalia {
-  display: flex;
-}
-
-.work-experience dt {
-  border-right: 1px solid var(--primary-color);
-}
-
-.work-experience dt::after {
-  --marker-width: 6px;
-  position: absolute;
-  top: 0.9em;
-  left: calc(100% - calc(var(--marker-width) / 2));
-  width: var(--marker-width);
-  height: var(--marker-width);
-  display: block;
-  border: 1px solid var(--primary-color);
-  border-width: 1px 1px 0 0;
-  transform: translateY(-50%) rotate(45deg);
-  content: "";
-  background-color: #fff;
+@media (min-width: 675px) {
+  dl {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  dt {
+    text-align: right;
+  }
+  dt {
+    border-right: 1px solid var(--primary-color);
+  }
+  dt::after {
+    --marker-width: 6px;
+    position: absolute;
+    top: 0.9em;
+    left: calc(100% - calc(var(--marker-width) / 2));
+    width: var(--marker-width);
+    height: var(--marker-width);
+    display: block;
+    border: 1px solid var(--primary-color);
+    border-width: 1px 1px 0 0;
+    transform: translateY(-50%) rotate(45deg);
+    content: "";
+    background-color: #fff;
+  }
 }
 
 .work-experience__role {
-  /* font-weight: bold; */
   display: block;
 }
 
-.my-face {
-  position: absolute;
-  right: 1em;
+@media (min-width: 675px) {
+  .my-face {
+    position: absolute;
+    right: 1em;
+  }
 }

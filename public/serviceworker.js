@@ -4,7 +4,7 @@
  * Provides offline fallback and caching.
  * We always try the cache first, then the network. Fresh responses are cached asynchronously.
  */
-const version = "V0.22";
+const version = "V0.23";
 const staticCacheName = `${version}::static`;
 
 // Install

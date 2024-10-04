@@ -1,0 +1,48 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Github from "../components/social/Github.astro";
+import Twitter from "../components/social/Twitter.astro";
+import Lastfm from "../components/social/Lastfm.astro";
+import Codepen from "../components/social/Codepen.astro";
+import Goodreads from "../components/social/Goodreads.astro";
+import Instagram from "../components/social/Instagram.astro";
+import LinkedIn from "../components/social/LinkedIn.astro";
+
+const pageTitle = "Whatstyle, online home of web developer Harmen Janssen";
+---
+
+<MainLayout pageTitle={pageTitle}>
+  <h1>Hi!</h1>
+  <p>
+    I'm <strong>Harmen Janssen</strong>, full-stack developer since 2006.
+    <br />
+    Currently I'm leading the development team at{" "}
+    <a href="https://grrr.nl">GRRR</a>, a great agency for Meaningful Matters.
+  </p>
+
+  <p>
+    👋 <a href="/cv">Take a look at my CV</a>
+  </p>
+
+  <p>
+    <a href="/articles">I used to run a blog</a>, but would recommend <a
+      href="https://grrr.tech">GRRR's Tech blog</a
+    > where I do most of my writing these days.
+  </p>
+
+  <aside>
+    <h2>Elsewhere:</h2>
+
+    <nav class="social-links">
+      <ul aria-label="Links to Harmen on social media">
+        <li><Github /></li>
+        <li><Twitter /></li>
+        <li><Lastfm /></li>
+        <li><Codepen /></li>
+        <li><Goodreads /></li>
+        <li><Instagram /></li>
+        <li><LinkedIn /></li>
+      </ul>
+    </nav>
+  </aside>
+</MainLayout>

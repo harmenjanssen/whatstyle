@@ -1,0 +1,48 @@
+---
+import "../styles/global.css";
+
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta name="author" content="Harmen Janssen" />
+    <meta name="theme-color" content="#ff336d" />
+    <meta
+      name="description"
+      content="Harmen Janssen has been a web developer for a million years, and still thinks naming things is the hardest problem in computing."
+    />
+    <link rel="favicon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>{pageTitle || "Whatstyle"}</title>
+    <script src="../scripts/main.js"></script>
+    <script is:inline>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/serviceworker.js")
+          .then(function () {
+            console.log("Service worker registered.");
+          })
+          .catch(function (error) {
+            console.error("Service worker registration failure!", error);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header role="banner">
+        <a href="/">Whatstyle.</a>
+      </header>
+      <main role="main">
+        <slot />
+      </main>
+      <footer class="main-footer">
+        &copy; Harmen Janssen, but I allow stealing.
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+
+import MainLayout from "../layouts/MainLayout.astro";
+import formatDate from "../utils/formatDate";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("posts");
+  return articles.map((article) => ({
+    params: {
+      article: article.data.url,
+    },
+  }));
+}
+
+const getYearsAgo = (date: string) =>
+  new Date().getFullYear() - new Date(date).getFullYear();
+
+const isOld = (date: string) => getYearsAgo(date) > 2;
+
+const { article: articleUrl } = Astro.params;
+
+const allPosts = await getCollection("posts");
+const post = allPosts.find((post) => post.data.url === `/${articleUrl}`);
+if (!post) {
+  return new Response(null, {
+    status: 404,
+    statusText: "Not found",
+  });
+}
+const pageTitle = `${post.data.title}, an article by Harmen Janssen`;
+const { Content } = await post.render();
+---
+
+<MainLayout pageTitle={pageTitle}>
+  <article>
+    <header>
+      <h1>{post.data.title}</h1>
+      {
+        isOld(post.data.date) && (
+          <p class="attention">
+            <strong>
+              👉 Whoa! Please note that this post is{" "}
+              {getYearsAgo(post.data.date)} years old. The views expressed
+              within might have become outdated.
+            </strong>
+          </p>
+        )
+      }
+      <time>{formatDate(post.data.date)}</time>
+    </header>
+
+    <Content />
+
+    <footer>
+      <p>
+        <a href="/articles">Back to the blog</a>
+      </p>
+    </footer>
+  </article>
+</MainLayout>

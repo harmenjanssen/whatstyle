@@ -4,7 +4,7 @@
  * Provides offline fallback and caching.
  * We always try the cache first, then the network. Fresh responses are cached asynchronously.
  */
-const version = "V0.13";
+const version = "V0.15";
 const staticCacheName = `${version}::static`;
 
 // Install
@@ -13,11 +13,13 @@ addEventListener("install", (installEvent) => {
     caches.open(staticCacheName).then((staticCache) => {
       return staticCache.addAll([
         "/",
+        "/cv",
         "/offline",
+        "/images/harmen.jpeg",
         //"/css/styles.css",
         //"/js/main.js",
       ]);
-    })
+    }),
   );
 });
 
@@ -40,8 +42,8 @@ addEventListener("fetch", (fetchEvent) => {
           fetch(request).then((responseFromFetch) =>
             caches
               .open(staticCacheName)
-              .then((cache) => cache.put(request, responseFromFetch))
-          )
+              .then((cache) => cache.put(request, responseFromFetch)),
+          ),
         );
         return responseFromCache;
       }
@@ -53,7 +55,7 @@ addEventListener("fetch", (fetchEvent) => {
           fetchEvent.waitUntil(
             caches
               .open(staticCacheName)
-              .then((cache) => cache.put(request, clonedResponse))
+              .then((cache) => cache.put(request, clonedResponse)),
           );
           return responseFromFetch;
         })
@@ -63,6 +65,6 @@ addEventListener("fetch", (fetchEvent) => {
             return caches.match("/offline/");
           }
         });
-    })
+    }),
   );
 });

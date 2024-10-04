@@ -4,7 +4,7 @@
  * Provides offline fallback and caching.
  * We always try the cache first, then the network. Fresh responses are cached asynchronously.
  */
-const version = "V0.20";
+const version = "V0.21";
 const staticCacheName = `${version}::static`;
 
 // Install
@@ -12,14 +12,7 @@ addEventListener("install", (installEvent) => {
   installEvent.waitUntil(
     caches.open(staticCacheName).then((staticCache) => {
       return staticCache
-        .addAll([
-          "/",
-          "/cv",
-          "/offline",
-          "/images/harmen.jpeg",
-          //"/css/styles.css",
-          //"/js/main.js",
-        ])
+        .addAll(["/", "/cv", "/offline", "/images/harmen.jpeg"])
         .catch((error) => {
           console.error("Failed to cache static assets:", error);
           throw error;
@@ -50,9 +43,12 @@ addEventListener("fetch", (fetchEvent) => {
         fetchEvent.waitUntil(
           fetch(request)
             .then((responseFromFetch) =>
-              caches
-                .open(staticCacheName)
-                .then((cache) => cache.put(request, responseFromFetch)),
+              caches.open(staticCacheName).then((cache) => {
+                console.log(
+                  "Fetched fresh response in the background, updating cache.",
+                );
+                cache.put(request, responseFromFetch);
+              }),
             )
             .catch(() => {
               console.log(

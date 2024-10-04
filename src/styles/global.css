@@ -334,3 +334,7 @@ dd:last-child {
     right: 1em;
   }
 }
+
+.skills li::marker {
+  color: var(--primary-color);
+}

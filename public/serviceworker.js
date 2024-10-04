@@ -4,7 +4,7 @@
  * Provides offline fallback and caching.
  * We always try the cache first, then the network. Fresh responses are cached asynchronously.
  */
-const version = "V0.21";
+const version = "V0.22";
 const staticCacheName = `${version}::static`;
 
 // Install
@@ -84,6 +84,22 @@ addEventListener("fetch", (fetchEvent) => {
             statusText: "Not found",
           });
         });
+    }),
+  );
+});
+
+// Purge old caches from previous versions of this service worker
+addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== staticCacheName) {
+            console.log(`Deleting cache: ${cacheName}`);
+            return caches.delete(cacheName);
+          }
+        }),
+      );
     }),
   );
 });

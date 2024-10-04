@@ -4,7 +4,7 @@
  * Provides offline fallback and caching.
  * We always try the cache first, then the network. Fresh responses are cached asynchronously.
  */
-const version = "V0.19";
+const version = "V0.20";
 const staticCacheName = `${version}::static`;
 
 // Install
@@ -31,6 +31,10 @@ addEventListener("install", (installEvent) => {
 // Fetch
 addEventListener("fetch", (fetchEvent) => {
   const request = fetchEvent.request;
+  if (request.url.startsWith("http://localhost")) {
+    console.log("Skip fetch for localhost");
+    return;
+  }
   const url = new URL(request.url);
   console.log("Fetching: " + url);
 

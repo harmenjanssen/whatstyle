@@ -10,6 +10,10 @@
   --gradient-size: 10%;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -58,6 +62,7 @@ body {
   flex-direction: column;
   background: #fff;
   border-radius: 4px;
+  view-transition-name: container;
 }
 
 /**
@@ -176,6 +181,28 @@ ul {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+/**
+ * Animation for waving hand emoji
+ */
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+.wave-to-the-people {
+  display: inline-block;
+}
+.cv-box:has(a:hover) .wave-to-the-people {
+  animation: wave 0.3s infinite;
 }
 
 /**

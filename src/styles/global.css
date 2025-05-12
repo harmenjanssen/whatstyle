@@ -355,4 +355,8 @@ dd:last-child {
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--primary-color);
   }
+
+  .skills li {
+    page-break-inside: avoid;
+  }
 }

@@ -19,6 +19,7 @@
 }
 
 html {
+  min-height: 100%;
   background: fixed
     radial-gradient(
       circle at 90% 0%,
@@ -338,4 +339,20 @@ dd:last-child {
 
 .skills li::marker {
   color: var(--primary-color);
+}
+
+@media print {
+  /* Save some ink why dontcha ❤️ */
+  html {
+    background: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    border-bottom: 1px solid currentColor;
+    background: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--primary-color);
+  }
 }

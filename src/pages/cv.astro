@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 const pageTitle = "Curriculum Vitae of Harmen Janssen";
 ---
 
-<MainLayout pageTitle={pageTitle}>
+<MainLayout pageTitle={pageTitle} showFooter={false}>
   <h1>Curriculum Vitae</h1>
 
   <h2>Personal</h2>
@@ -20,6 +20,14 @@ const pageTitle = "Curriculum Vitae of Harmen Janssen";
 
     <dt>Location</dt>
     <dd>Harderwijk, The Netherlands</dd>
+
+    <dt>Website</dt>
+    <dd><a href="https://www.whatstyle.net">whatstyle.net</a></dd>
+
+    <dt>GitHub</dt>
+    <dd>
+      <a href="https://github.com/harmenjanssen">harmenjanssen</a>
+    </dd>
   </dl>
 
   <h2>Work experience</h2>

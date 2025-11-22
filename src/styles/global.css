@@ -8,6 +8,7 @@
   --gradient-min-size: 20%;
   --gradient-max-size: 80%;
   --gradient-size: 10%;
+  --container-padding: 1.5em;
 }
 
 @view-transition {
@@ -35,7 +36,7 @@ html {
 }
 
 body {
-  max-width: 35em;
+  max-width: 40em;
   min-height: 100%;
   margin: 0 auto;
   padding: 0;
@@ -44,6 +45,7 @@ body {
   font-size: 1.2em;
   line-height: 1.5;
   color: var(--body-color);
+  overflow-y: scroll;
 }
 
 @media (min-width: 420px) {
@@ -58,11 +60,11 @@ body {
   position: relative;
   min-height: calc(100vh - 2em);
   margin: 1em;
-  padding: 1em;
+  padding: var(--container-padding);
   display: flex;
   flex-direction: column;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 1em;
   view-transition-name: container;
 }
 
@@ -307,7 +309,7 @@ dd:last-child {
   dt {
     text-align: right;
   }
-  dt {
+  /* dt {
     border-right: 1px solid var(--primary-color);
   }
   dt::after {
@@ -323,7 +325,7 @@ dd:last-child {
     transform: translateY(-50%) rotate(45deg);
     content: "";
     background-color: #fff;
-  }
+  } */
 }
 
 .work-experience__role {
@@ -333,7 +335,7 @@ dd:last-child {
 @media (min-width: 675px) {
   .my-face {
     position: absolute;
-    right: 1em;
+    right: var(--container-padding);
   }
 }
 

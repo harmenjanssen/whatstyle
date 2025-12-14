@@ -4,7 +4,7 @@
  * Provides offline fallback and caching.
  * We always try the cache first, then the network. Fresh responses are cached asynchronously.
  */
-const version = "V0.23";
+const version = "V0.24";
 const staticCacheName = `${version}::static`;
 
 // Install
@@ -15,7 +15,6 @@ addEventListener("install", (installEvent) => {
         .addAll(["/", "/cv", "/offline", "/images/harmen.jpeg"])
         .catch((error) => {
           console.error("Failed to cache static assets:", error);
-          throw error;
         });
     }),
   );

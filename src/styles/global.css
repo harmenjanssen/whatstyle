@@ -153,6 +153,10 @@ ul {
   padding-left: 1em;
 }
 
+img {
+  max-width: 100%;
+}
+
 .attention {
   padding: 0.5em;
   border-left: 1px solid var(--body-color);
@@ -221,8 +225,8 @@ ul {
   margin-bottom: 1em;
 }
 
-time {
-  display: block;
+.post-meta {
+  margin: 0;
   font-size: 0.75em;
 }
 

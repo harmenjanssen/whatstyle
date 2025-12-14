@@ -47,7 +47,17 @@ const { Content } = await post.render();
           </p>
         )
       }
-      <time>{formatDate(post.data.date)}</time>
+      <p class="post-meta">
+        <time>{formatDate(post.data.date)}</time>
+        {
+          post.data.norday && (
+            <span>
+              – Originally published on the
+              <a href="https://norday.tech">Norday tech blog</a>.
+            </span>
+          )
+        }
+      </p>
     </header>
 
     <Content />

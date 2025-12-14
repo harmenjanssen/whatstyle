@@ -5,4 +5,6 @@ const { url, title, date } = Astro.props;
 ---
 
 <a href={url}>{title}</a>
-<time>{formatDate(date)}</time>
+<p class="post-meta">
+  <time>{formatDate(date)}</time>
+</p>
